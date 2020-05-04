@@ -211,7 +211,10 @@ export default function Home() {
       <div>
         {country.map((e) => (
           <div>
-            <Link as={`/${e.name}`} href="/[country]">
+            <Link
+              as={`/${e.name.replace(" ", "-").toLowerCase()}`}
+              href="/[country]"
+            >
               <a>Navigate to {e.name}</a>
             </Link>
           </div>
