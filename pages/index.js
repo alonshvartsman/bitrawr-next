@@ -209,13 +209,13 @@ export default function Home() {
         <h1 className="title">Welcome to Bitrawr</h1>
       </main>
       <div>
-        {country.map((e) => (
+        {country.map((link) => (
           <div>
             <Link
-              as={`/${e.name.replace(" ", "-").toLowerCase()}`}
+              as={`/${link.name.replace(" ", "-").toLowerCase()}`}
               href="/[country]"
             >
-              <a>Navigate to {e.name}</a>
+              <a>Navigate to {link.name}</a>
             </Link>
           </div>
         ))}
@@ -235,6 +235,10 @@ export default function Home() {
 
         * {
           box-sizing: border-box;
+        }
+        a {
+          text-decoration: none;
+          padding: 10px;
         }
       `}</style>
     </div>
